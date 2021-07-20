@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- animation libray  -->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+   
+    <title>Hello, world!</title>
+
+
+    <style>
+         .signature{
+            font-family: 'Great Vibes', cursive;
+            color: #ddd;
+        }
+        .title{
+            font-family: 'Kaushan Script', cursive;
+        }
+        .wish {
+            font-family: 'Shadows Into Light', cursive;
+            color: #7b73ec;
+            text-align: center;
+        }
+        .name{
+            font-family: 'Sacramento', cursive;
+            color: #d200fc;
+            font-size: 4rem;
+        }
+        body{
+            background-image: url(https://images.pexels.com/photos/8411420/pexels-photo-8411420.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        .modal-content{
+            background-color: #b316160f;
+        }
+        .my_style{
+            box-shadow: 0px 0px 30px  #e08e8e;
+            border-radius: 10px;
+        }
+        .my_btn{
+            background: #4a02f16e;
+            color: white;
+        }
+        .modal-title{
+            color: #fff;
+        }
+    </style>
+  </head>
+  <body>
+    <h1 class="title text-center mt-2 animate__animated animate__backInDown">Assalamu Alaikum</h1>
+    <a class="my_btn btn wish  d-flex justify-content-center" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Click To Get Wish</a>
+   <div class="container mt-5">
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered animate__animated animate__zoomIn">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalToggleLabel">Plese Enter Your Name😊</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <input type="text" class="form-control"  id="getName" placeholder="Here Your Name">
+            </div>
+            <div class="modal-footer">
+              <button class="btn my_btn" onclick="writeName()" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Get Wish</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <!-- <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5> -->
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mx-3 d-flex justify-content-center">
+                    <div class="my_style m-auto col p-3 animate__animated animate__flip">
+                       <h1 class="text-center m-1 fs-5 signature">Dear <br> <span id="name" class="name "> alexa</span></h1>
+                       <p class="text-center my-1 wish fs-1">EID MUBARAK</p>
+                       <p class="wish fs-3">Eid Mubarak to you and your family ! Sending all of my love and good wishes to you on this EID. Happy <br> <span class="signature">EID MUBARAK,</span><br> dear brother / sister</p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <a class="btn btn-primary text-center m-5" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a> -->
+   </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- --------------------
+                my script 
+         ---------------------------- -->
+            <script>
+                function writeName() {
+                    var readName = document.getElementById('getName').value;
+                    console.log(readName);
+                    // if (name.length <= 2) {
+                    //     document.getElementById('name').innerHTML = "Enter right name";
+
+                    // }
+                    // else {
+                        
+                        document.getElementById('name').innerHTML = readName;
+                    // }
+                    
+                }
+            </script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
